@@ -3,7 +3,7 @@ const Nosotros = () => {
 
     return(
         <div className="container my-5">
-            <h2>NOSOTROS</h2>
+            <h3>NOSOTROS</h3>
             <hr />
         </div>
     ) 

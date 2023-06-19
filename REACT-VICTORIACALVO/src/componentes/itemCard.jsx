@@ -6,6 +6,7 @@ import Buttons from './button'
 function ItemCard({nombre, imagen, descripcion}) {
     return (
         <Row xs={1} md={3} className="g-4">
+            {Array.from ({length : 3 }).map ((_,index) => (
                 <Col>
                     <Card>
                         <Card.Img variant="top" src={imagen} />
@@ -18,6 +19,7 @@ function ItemCard({nombre, imagen, descripcion}) {
                         </Card.Body>
                     </Card>
                 </Col>
+            ))}
         </Row>
     );
 }

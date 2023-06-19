@@ -6,7 +6,7 @@ const ItemList = ({items}) => {
 
     return (
         <div>
-            <h2>Productos</h2>
+            <h3>PRODUCTOS</h3>
             <hr/>
 
             <div className='row'>

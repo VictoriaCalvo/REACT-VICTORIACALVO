@@ -1,62 +1,62 @@
 [
     {
-        "id": "conjunto1",
+        "id": 1,
         "nombre": "CONJUNTO UNO",
         "descripcion": "ESTE CONJUNTO ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!",
         "imagen": "/img/lao1 (1).jpg",
-        "categoria": "CONJUNTOS",
+        "categoria": "conjuntos",
         "precio": 16000,
         "cantidad": 1
     },
     
     {
-        "id": "conjunto2",
+        "id": 2,
         "nombre": "CONJUNTO SIRENA",
         "descripcion": "ESTE CONJUNTO ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!",
         "imagen": "/img/201(1).jpg",
-        "categoria": "CONJUNTOS",
+        "categoria": "conjuntos",
         "precio": 16000,
         "cantidad": 1
     },
     
     {
-        "id": "conjunto",
+        "id": 3,
         "nombre": "CONJUNTO SIRENA",
         "descripcion": "ESTE CONJUNTO ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!",
         "imagen": "/img/A.jpg",
-        "categoria": "CONJUNTOS",
+        "categoria": "conjuntos",
         "precio": 16000,
         "cantidad": 1
     },
 
 
     {
-        "id": "remeron1",
+        "id": 4,
         "nombre": "REMERON",
         "descripcion": "ESTE REMERON ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!",
         "imagen": "/img/lao2 (1).jpg",
-        "categoria":"REMERONES",
+        "categoria":"remerones",
         "precio": 5000,
         "cantidad": 1
     },
 
     
     {
-        "id": "vestido3",
+        "id": 4,
         "nombre": "VESTIDO MUSCULOSA",
         "descripcion": "ESTE VESTIDO ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!",
         "imagen": "/img/IMG_8070web (1).jpg",
-        "categoria": "VESTIDOS",
+        "categoria": "vestidos",
         "precio": 10000,
         "cantidad": 1
     },
     
     {
-        "id": "vestido4",
+        "id": 5,
         "nombre": "VESTIDO LARGO",
         "descripcion": "ESTE VESTIDO ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!",
         "imagen": "/img/IMG_8070web (1).jpg",
-        "categoria": "VESTIDOS",
+        "categoria": "vestidos",
         "precio": 10000,
         "cantidad": 1
     }

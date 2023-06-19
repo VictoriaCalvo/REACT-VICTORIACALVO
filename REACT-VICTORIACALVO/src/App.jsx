@@ -2,7 +2,7 @@ import './estilos/main.scss'
 import Header from "./componentes/header"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from "./componentes/itemListContainer"
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Nosotros from './componentes/nosotros'
 import Contacto from './componentes/contacto'
 import IniciarSesion from './componentes/iniciarSesion'
@@ -14,10 +14,15 @@ function App() {
     <BrowserRouter>
 
       <Header />
-      <ItemListContainer />
-      <Nosotros/>
-      <IniciarSesion/>
-      <Contacto/>
+
+      <Routes>
+        <Route path='/' element= {<ItemListContainer />}/>
+        <Route path='/productos/:categoriaId' element= {<ItemListContainer />}/>
+        <Route path='/nosotros' element= {<Nosotros />}/>
+        <Route path='/iniciarsesion' element= {<IniciarSesion />}/>
+        <Route path='/contacto' element= {<Contacto />}/>
+        <Route path='*' element= { <Navigate to= {"/"} /> } />
+      </Routes>
 
     </BrowserRouter>
   )

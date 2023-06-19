@@ -1,23 +1,3 @@
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-
-// function ItemListContainer() {
-//     return (
-//         <Card className='contenedorCards'>
-//             <Card.Img variant="top" src="../../img/201(1).jpg" />
-//             <Card.Body>
-//                 <Card.Title>CONJUNTO SIRENA</Card.Title>
-//                 <Button variant="primary">AGREGAR</Button>
-//             </Card.Body>
-//             <Card.Img variant="top" src="../../img/lao1 (1).jpg" />
-//             <Card.Body>
-//                 <Card.Title>CONJUNTO UNO</Card.Title>
-//                 <Button variant="primary">AGREGAR</Button>
-//             </Card.Body>
-//         </Card>
-//     );
-// }
-
 import '../estilos/itemListContainer.scss'
 import ItemList from './itemList'
 import { useState, useEffect } from 'react'
