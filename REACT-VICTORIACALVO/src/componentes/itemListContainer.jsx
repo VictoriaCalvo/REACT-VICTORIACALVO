@@ -18,33 +18,43 @@
 //     );
 // }
 
+import '../estilos/itemListContainer.scss'
+import ItemList from './itemList'
+import { useState, useEffect } from 'react'
+import { traerDatos } from '../ayudantes/traerDatos'
+import { useParams } from 'react-router-dom'
 
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Buttons from './button'
+const ItemListContainer = () => {
 
-function ItemListContainer() {
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    const { categoriaId } = useParams()
+
+    useEffect(() => {
+        setLoading(true)
+
+        traerDatos()
+            .then((res) => {
+                if (!categoriaId) {
+                    setProductos(res)
+                } else {
+                    setProductos( res.filter((item) => item.categoria === categoriaId) )
+                }
+            })
+            .catch((err) => console.log(err))
+            .finally(() => setLoading(false))
+    }, [categoriaId])
+
     return (
-        <Row xs={1} md={2} className="g-4">
-            {Array.from({ length: 4 }).map((_, idx) => (
-                <Col>
-                    <Card>
-                        <Card.Img variant="top" src="../../img/s11.jpg" />
-                        <Card.Body>
-                            <Card.Title>CONJUNTO SIRENA</Card.Title>
-                            <Card.Text>
-                                ESTE CONJUNTO ES ÚNICO E IRREPETIBLE, ESTÁ CONFENCCIONADO A MANO JUSTO PARA VOS!
-                            </Card.Text>
-                            <Buttons />
-                        </Card.Body>
-                    </Card>
-                </Col>
-            ))}
-        </Row>
-    );
+        <div className="container my-5">
+            {
+                loading
+                    ? <h2>Cargando...</h2>
+                    : <ItemList items={productos}/>
+            }
+        </div>
+    )
 }
 
-
-
-export default ItemListContainer;
+export default ItemListContainer
