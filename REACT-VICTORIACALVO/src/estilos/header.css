@@ -4,9 +4,6 @@
   color: black;
   text-decoration: none;
 }
-.navbar_brand :hover {
-  color: black;
-}
 
 .nav_link {
   font-size: 1.2rem;
@@ -14,6 +11,7 @@
   text-decoration: none;
   padding: 10px;
 }
-.nav_link :hover {
+
+.navbar :hover {
   color: black;
 }/*# sourceMappingURL=header.css.map */

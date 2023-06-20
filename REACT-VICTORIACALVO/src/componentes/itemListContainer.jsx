@@ -30,7 +30,7 @@ const ItemListContainer = () => {
         <div className="container my-5">
             {
                 loading
-                    ? <h2>Cargando...</h2>
+                    ? <h2>CARGANDO...</h2>
                     : <ItemList items={productos}/>
             }
         </div>

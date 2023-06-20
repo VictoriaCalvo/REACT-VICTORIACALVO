@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './cartwidge';
 import { Link } from 'react-router-dom';
+import Dropdown from './dropdown';
 
 
 function header() {
@@ -15,6 +16,7 @@ function header() {
                         <Link className= "nav_link" to="/nosotros">NOSOTROS</Link>
                         <Link className= "nav_link" to="/iniciarsesion">INICIAR SESIÓN</Link>
                         <Link className= "nav_link" to="/contacto">CONTACTO</Link>
+                    <Dropdown />
                     </Nav>
                 <CartWidget />
                 </Container>

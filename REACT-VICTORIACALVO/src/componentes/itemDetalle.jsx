@@ -1,14 +1,15 @@
-import '../estilos/btn.scss'
+
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-// import Buttons from './button'
-import { Link } from 'react-router-dom';
+import Buttons from './button'
+// import { Link } from 'react-router-dom'; 
 
-function ItemCard({id, nombre, imagen, descripcion}) {
+
+
+function ItemDetalle({id,nombre, imagen, descripcion, precio}) {
     return (
         <Row xs={1} md={3} className="g-4">
-            {Array.from ({length : 3 }).map ((_,index) => (
                 <Col>
                     <Card>
                         <Card.Img variant="top" src={imagen} />
@@ -16,15 +17,15 @@ function ItemCard({id, nombre, imagen, descripcion}) {
                             <Card.Title> {nombre} </Card.Title>
                             <Card.Text>
                                 {descripcion}
+                                <br />
+                                {precio} ARS 
                             </Card.Text>
-                            {/* <Buttons /> */}
-                            <Link variant="dark" className= "btn" to= {`/detalle/${id}`}>VER MÁS</Link>
+                            <Buttons />
                         </Card.Body>
                     </Card>
                 </Col>
-            ))}
         </Row>
     );
 }
 
-export default ItemCard
+export default ItemDetalle
