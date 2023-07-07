@@ -1,14 +1,11 @@
 import Button from 'react-bootstrap/Button';
 
-function Buttons() {
+function Buttons(agregar) {
     return (
 
-        <Button variant="dark">AGREGAR</Button>
+        <Button onClick={agregar} variant="dark">AGREGAR</Button>
 
     );
 }
 
-
-
 export default Buttons
-

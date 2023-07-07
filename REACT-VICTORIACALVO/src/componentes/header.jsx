@@ -14,7 +14,6 @@ function header() {
                     < Link className= "navbar_brand" to="/">LA ORDEN DEL<br />NUEVO MUNDO</Link>
                     <Nav className="me-auto">
                         <Link className= "nav_link" to="/nosotros">NOSOTROS</Link>
-                        <Link className= "nav_link" to="/iniciarsesion">INICIAR SESIÓN</Link>
                         <Link className= "nav_link" to="/contacto">CONTACTO</Link>
                     <Dropdown />
                     </Nav>
