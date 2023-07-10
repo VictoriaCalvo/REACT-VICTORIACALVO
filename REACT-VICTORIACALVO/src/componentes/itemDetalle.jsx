@@ -9,7 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 
-function ItemDetalle({ id, nombre, imagen, descripcion, precio, stock }) {
+function ItemDetalle({ id, nombre, img, descripcion, precio, stock }) {
 
     const { agregarAlCarrito, estaEnCart } = useContext(CartContexto)
     
@@ -20,7 +20,7 @@ function ItemDetalle({ id, nombre, imagen, descripcion, precio, stock }) {
     const agregar = () => {
 
         const item = {
-            id, nombre, imagen, descripcion, precio, stock, cantidad
+            id, nombre, img, descripcion, precio, stock, cantidad
         }
 
         agregarAlCarrito(item)
@@ -34,7 +34,7 @@ function ItemDetalle({ id, nombre, imagen, descripcion, precio, stock }) {
         <Row xs={1} md={3} className="g-4">
             <Col>
                 <Card>
-                    <Card.Img variant="top" src={imagen} />
+                    <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title> {nombre} </Card.Title>
                         <Card.Text>

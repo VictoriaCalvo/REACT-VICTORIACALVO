@@ -42,7 +42,7 @@ const Cart = () => {
                         <Row xs={1} md={3} className="g-4">
                             <Col>
                                 <Card>
-                                    <Card.Img variant="top" src={prod.imagen} />
+                                    <Card.Img variant="top" src={prod.img} />
                                     <Card.Body>
                                         <Card.Title> {prod.nombre} </Card.Title>
                                         <Card.Text>

@@ -6,13 +6,13 @@ import Row from 'react-bootstrap/Row';
 // import Buttons from './button'
 import { Link } from 'react-router-dom';
 
-function ItemCard({id, nombre, imagen, stock}) {
+function ItemCard({id, nombre, img, stock}) {
     return (
         <Row xs={1} md={3} className="g-4">
             {Array.from ({length : 3 }).map ((_,index) => (
                 <Col>
                     <Card>
-                        <Card.Img variant="top" src={imagen} />
+                        <Card.Img variant="top" src={img} />
                         <Card.Body>
                             <Card.Title> {nombre} </Card.Title>
                             <br/>

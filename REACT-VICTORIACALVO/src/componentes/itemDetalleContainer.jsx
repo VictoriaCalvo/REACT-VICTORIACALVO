@@ -1,24 +1,31 @@
 import { useState, useEffect } from 'react'
-import { traerDatos } from '../ayudantes/traerDatos'
 import { useParams } from 'react-router-dom'
 import ItemDetalle from './itemDetalle'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../firebase/configuracion'
 
 const ItemDetalleContainer = () => {
 
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)
+    console.log(item)
 
     const { itemId } = useParams()
 
     useEffect(() => {
         setLoading(true)
 
-        traerDatos()
-            .then((res) => {
-                setItem (res.find ((prod) => prod.id === Number(itemId)))
+        const itemRef = doc(db, "productos", itemId)
+        getDoc(itemRef)
+
+            .then((doc) => {
+
+                setItem({ ...doc.data(), id: doc.id })
             })
-            .catch((err) => console.log(err))
-            .finally(() => setLoading(false))
+
+            .catch (e => console.log(e))
+            .finally (() => setLoading(false))
+
     }, [itemId])
 
     return (
