@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 function Buttons(agregar) {
     return (
 
-        <Button onClick={agregar} variant="dark">AGREGAR</Button>
+        <Button onClick={agregar} variant="dark">AÑADIR A LA CESTA</Button>
 
     );
 }

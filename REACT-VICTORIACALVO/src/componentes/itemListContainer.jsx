@@ -1,8 +1,9 @@
 import '../estilos/itemListContainer.scss'
 import ItemList from './itemList'
 import { useState, useEffect } from 'react'
-import { traerDatos } from '../ayudantes/traerDatos'
 import { useParams } from 'react-router-dom'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebase/configuracion'
 
 const ItemListContainer = () => {
 
@@ -14,16 +15,16 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        traerDatos()
-            .then((res) => {
-                if (!categoriaId) {
-                    setProductos(res)
-                } else {
-                    setProductos( res.filter((item) => item.categoria === categoriaId) )
-                }
+        const prodRef = collection(db, "productos")
+        getDocs(prodRef)
+            .then((resp) => {
+                const items = resp.docs.map((doc) => doc.data())
+                setProductos (items)
             })
-            .catch((err) => console.log(err))
+
+            .catch (e => console.log(e))
             .finally(() => setLoading(false))
+        
     }, [categoriaId])
 
     return (

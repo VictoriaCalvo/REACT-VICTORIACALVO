@@ -15,10 +15,13 @@ const ItemContador = ({ max, cantidad, setCantidad, agregar }) => {
         <div>
             <button onClick={restar} className="btn_cont">-</button>
             <span className="mx-3">{cantidad}</span>
-            <button onClick={sumar} className="btn_cont">+</button>
+            <button 
+            onClick={sumar} 
+            className="btn_cont"
+            disabled={cantidad === max}>+</button>
             <br/>
             <br/>
-            <button onClick={agregar} className="btn">AGREGAR</button>
+            <button onClick={agregar} className="btn">AÑADIR A LA CESTA</button>
         </div>
     )
 }

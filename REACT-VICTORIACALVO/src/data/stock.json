@@ -6,7 +6,7 @@
         "imagen": "/img/lao1 (1).jpg",
         "categoria": "conjuntos",
         "precio": 16000,
-        "stock": 10
+        "stock": 5
     },
     
     {
@@ -16,7 +16,7 @@
         "imagen": "/img/201(1).jpg",
         "categoria": "conjuntos",
         "precio": 16000,
-        "stock": 10
+        "stock": 20
     },
     
     {
@@ -26,7 +26,7 @@
         "imagen": "/img/A.jpg",
         "categoria": "conjuntos",
         "precio": 16000,
-        "stock": 10
+        "stock": 8
     },
 
 
@@ -37,7 +37,7 @@
         "imagen": "/img/lao2 (1).jpg",
         "categoria":"remerones",
         "precio": 5000,
-        "stock": 10
+        "stock": 15
     },
 
     
@@ -48,7 +48,7 @@
         "imagen": "/img/IMG_8070web (1).jpg",
         "categoria": "vestidos",
         "precio": 10000,
-        "stock": 10
+        "stock": 3
     },
     
     {
@@ -58,6 +58,6 @@
         "imagen": "/img/IMG_8070web (1).jpg",
         "categoria": "vestidos",
         "precio": 10000,
-        "stock": 10
+        "stock": 18
     }
 ]
