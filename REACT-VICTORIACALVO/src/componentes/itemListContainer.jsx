@@ -9,7 +9,6 @@ const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
-    console.log (productos)
 
     const { categoriaId } = useParams()
 
@@ -17,7 +16,10 @@ const ItemListContainer = () => {
         setLoading(true)
 
         const prodRef = collection(db, "productos")
-        const q = query(prodRef, where("categoria", "==", categoriaId))
+        const q = categoriaId
+                    ? query(prodRef, where("categoria", "==", categoriaId))
+                    : prodRef
+
         getDocs(q)
             .then((resp) => {
                 const items = resp.docs.map((doc) => ({...doc.data(), id: doc.id}))

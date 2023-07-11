@@ -13,6 +13,7 @@ function header() {
             <Container>
                 < Link className="navbar_brand" to="/">LA ORDEN DEL<br />NUEVO MUNDO</Link>
                 <Nav className="me-auto">
+                    <Link className="nav_link" to="/iniciarSesion">INICIAR SESIÓN</Link>
                     <Link className="nav_link" to="/nosotros">NOSOTROS</Link>
                     <Link className="nav_link" to="/contacto">CONTACTO</Link>
                     <Dropdown />
