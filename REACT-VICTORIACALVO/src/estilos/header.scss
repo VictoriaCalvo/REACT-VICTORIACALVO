@@ -17,3 +17,36 @@
         color: black;
     }
 }
+
+.navbar {
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+
+            display: flex;
+            width: 100%;
+            align-items: end;
+            
+            .cartWidget {
+                padding: 10px 0 0 190px;
+            }
+        }
+
+        
+            .logout {
+                padding-top: 20px;
+                width: 100%;
+                display: flex;
+                justify-content: start;
+
+                .parrafo{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+    }
+}

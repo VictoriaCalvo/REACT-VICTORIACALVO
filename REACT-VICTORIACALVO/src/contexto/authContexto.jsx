@@ -1,39 +1,51 @@
-import { createContext, useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
+import { onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from '../firebase/configuracion'
 
 export const AuthContexto = createContext()
 
-export const AuthContextoProveedor = ({children}) => {
+export const AuthContextoProveedor = ({ children }) => {
 
-    const [user, setUser] = useState ({
+    const [user, setUser] = useState({
         logged: false,
         email: null
     })
 
-    console.log(user)
-
     const login = (values) => {
-        setUser ({
-            logged: true,
-            email: values.email
-        })
+
+        signInWithEmailAndPassword(auth, values.email, values.password)
+            .catch(e => console.log(e))
     }
 
     const register = (values) => {
-        createUserWithEmailAndPassword (auth, values.email, values.password)
-        .then ((userCredential) => {
-            const user = userCredential.user
-
-            setUser ({
-                logged: true,
-                email: user.email
-            })
-        })
+        createUserWithEmailAndPassword(auth, values.email, values.password)
+            .catch(e => console.log(e))
     }
 
-    return(
-        <AuthContexto.Provider value={{user, login, register}}>
+    const logout = () => {
+        signOut(auth)
+    }
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+
+            if (user) {
+
+                setUser({
+                    logged: true,
+                    email: user.email
+                })
+            } else {
+                setUser({
+                    logged: false,
+                    email: null
+                })
+            }
+        })
+    }, [])
+
+    return (
+        <AuthContexto.Provider value={{ user, login, register, logout }}>
             {children}
         </AuthContexto.Provider>
     )

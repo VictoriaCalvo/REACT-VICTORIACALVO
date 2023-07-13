@@ -9,6 +9,7 @@ import Cart from '../componentes/cart'
 import { useContext } from 'react'
 import { AuthContexto } from "../contexto/authContexto"
 import RegistroScreen from "../componentes/auth/registroScreen"
+import CheckOut from "../componentes/checkOut"
 
 
 const AppRouter = () => {
@@ -29,8 +30,8 @@ const AppRouter = () => {
                             <Route path='/productos/:categoriaId' element={<ItemListContainer />} />
                             <Route path='/detalle/:itemId' element={<ItemDetalleContainer />} />
                             <Route path='/nosotros' element={<Nosotros />} />
-                            <Route path='/iniciarSesion' element={<IniciarSesion />} />
                             <Route path='/contacto' element={<Contacto />} />
+                            <Route path='/checkout' element={<CheckOut />} />
                             <Route path='/cart' element={<Cart />} />
                             <Route path='*' element={<Navigate to={"/"} />} />
                         </Routes>

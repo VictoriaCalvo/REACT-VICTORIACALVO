@@ -44,7 +44,7 @@ function ItemDetalle({ id, nombre, img, descripcion, precio, stock }) {
                         </Card.Text>
                         {
                             estaEnCart(id)
-                                ? <Link className='btn' to="/cart">TERMINAR COMPRA</Link>
+                                ? <Link className='btn' to="/cart">SEGUIR</Link>
                                 :
                                 <ItemContador
                                     max={stock}

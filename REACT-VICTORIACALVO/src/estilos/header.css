@@ -14,4 +14,28 @@
 
 .navbar :hover {
   color: black;
+}
+
+.navbar .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar .container .header {
+  display: flex;
+  width: 100%;
+  align-items: end;
+}
+.navbar .container .header .cartWidget {
+  padding: 10px 0 0 190px;
+}
+.navbar .container .logout {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.navbar .container .logout .parrafo {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=header.css.map */

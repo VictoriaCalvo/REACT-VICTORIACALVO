@@ -69,7 +69,9 @@ const Cart = () => {
 
             <br />
 
-            <button onClick={vaciarCarrito} className='btn'>VACIAR CARRITO</button>
+            <Link className='btn' to='/checkout'>TERMINAR MI COMPRA</Link>
+            <br/>
+            <button onClick={vaciarCarrito} className='btn my-2'>VACIAR CARRITO</button>
         </div>
     );
 }
